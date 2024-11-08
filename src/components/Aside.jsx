@@ -70,7 +70,13 @@ export default function Aside() {
 
 					<div className='mt-[30px] flex flex-col gap-2'>
 						{links.map((link, idx) => (
-							<SidebarLink key={idx} link={link} />
+							<div className='flex items-center justify-between pr-5'>
+								<SidebarLink key={idx} link={link} />
+								
+								{
+									link.num && <p className='px-[5px] py-[1px] text-[10px] leading-[14px] font-semibold bg-[#D11A2A] text-[#D11A2A] rounded-[7px] bg-opacity-10'>{link.num}</p>
+								}
+							</div>
 						))}
 					</div>
 				</div>
